@@ -11,13 +11,16 @@
 	},
 	"dependencies": {
 		"@astrojs/react": "^3.0.10",
+		"@astrojs/rss": "^4.0.5",
 		"@astrojs/solid-js": "^4.0.1",
 		"@astrojs/tailwind": "^5.1.0",
 		"@nanostores/solid": "^0.4.2",
 		"astro": "^4.4.11",
+		"markdown-it": "^14.0.0",
 		"nanostores": "^0.10.0",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
+		"sanitize-html": "^2.12.1",
 		"solid-js": "^1.8.15",
 		"tailwindcss": "^3.4.1"
 	},
