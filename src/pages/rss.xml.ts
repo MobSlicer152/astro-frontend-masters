@@ -17,7 +17,7 @@ export async function GET(context: AstroConfig) {
                 title: post.data.title,
                 pubDate: post.data.date,
                 description: post.data.description,
-                link: `/blog/${post.slug}`,
+                link: `${import.meta.env.BASE_URL}/blog/${post.slug}`,
                 content: sanitizeHtml(parser.render(post.body))
             }
         })

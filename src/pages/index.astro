@@ -1,7 +1,8 @@
 ---
 import Layout from '../layouts/default.astro';
-import heroImage from '../images/sandwich-hero.jpg';
 import ShopItems from '../components/shopItems.astro';
+import newsletterImage from '../images/newsletter.jpg';
+import heroImage from '../images/sandwich-hero.jpg';
 ---
 
 <Layout>
@@ -11,7 +12,7 @@ import ShopItems from '../components/shopItems.astro';
 			<p class="lede">
 				The world's leading sandwich connoisseurs trust sndwch.
 			</p>
-			<a href="/shop" class="big-link">Shop Sandwich Kits</a>
+			<a href={`${import.meta.env.BASE_URL}/shop`} class="big-link">Shop Sandwich Kits</a>
 		</div>
 
 		<img
@@ -25,7 +26,25 @@ import ShopItems from '../components/shopItems.astro';
 
 	<section class="block products">
 		<ShopItems count={3} addToCart={false} />
-		<p class="big-link"><a href="/shop">Shop All Sandwich Kits &rarr;</a></p>
+		<p class="big-link"><a href={`${import.meta.env.BASE_URL}/shop`}>Shop All Sandwich Kits &rarr;</a></p>
+	</section>
+
+	<section class="block newsletter">
+		<img src={newsletterImage.src} alt={`a bag with the word "sndwch" captioned on it`}>
+		<div class="copy">
+			<h3>Prefer your sandwiches to go?</h3>
+			<p>Get the sndwch newsletter to hear what else qualifies as a sandwich first!</p>
+
+			<form method="post" class="newsletter-form" action={`${import.meta.env.BASE_URL}/newsletter`}>
+				<label for="name">Name</label>
+				<input type="text" id="name" name="name" required />
+			
+				<label for="email">Email</label>
+				<input type="email" id="email" name="email" required />
+			
+				<button type="submit" class="big-link">Subscribe</button>
+			</form>
+		</div>
 	</section>
 </Layout>
 

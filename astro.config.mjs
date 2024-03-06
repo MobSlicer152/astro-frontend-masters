@@ -6,6 +6,9 @@ import solidJs from "@astrojs/solid-js";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://mobslicer152.github.io/astro-frontend-masters/',
+  site: 'https://mobslicer152.github.io',
+  base: '/astro-frontend-masters',
+  trailingSlash: 'never',
+  output: 'hybrid',
   integrations: [tailwind(), react(), solidJs()]
 });
