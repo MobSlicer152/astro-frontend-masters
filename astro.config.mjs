@@ -9,6 +9,6 @@ export default defineConfig({
   site: 'https://mobslicer152.github.io',
   base: '/astro-frontend-masters',
   trailingSlash: 'never',
-  output: 'hybrid',
+  //output: 'hybrid', // github pages no work
   integrations: [tailwind(), react(), solidJs()]
 });
